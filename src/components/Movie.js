@@ -38,11 +38,12 @@ function Movie(props) {
         }
   return (
     <Col xs="12" lg="6" xl="4">
-      <Card style={{marginBottom:30}}>
+      <Card style={{ marginBottom: 30 }}>
         <CardImg top src={props.movieImg} alt={props.movieName} />
         <CardBody>
           <p>
-            Like <FontAwesomeIcon icon={faHeart} />
+            Like{" "}
+            <FontAwesomeIcon icon={faHeart} style={{ cursor: "pointer" }} />
           </p>
           <p>
             Nombre de vues <FontAwesomeIcon icon={faVideo} />{" "}
