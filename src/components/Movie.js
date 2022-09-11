@@ -33,6 +33,29 @@ function Movie(props) {
   // Initialisation d'un etat countWatchMovie
 const [countWatchMovie, setCountWatchMovie] = useState(0);
 
+// Initialisation d'une variable d'etat pour le Rating
+const [myRatingMovie, setMyRatingMovie] = useState(0);
+
+var setMyRating =(rating) =>{
+  if(rating <0){
+    rating=0
+  }
+  if (rating > 0) {
+    rating = 10;
+  }
+  setMyRatingMovie(rating)
+}
+ 
+// Afficher le nombre d'etoile en conséquence en fonction du Rating
+var tabRating=[];
+for(var i=0;i<10;i++){
+  var color={};
+  if(i<myRatingMovie){
+    color= {color: "#f1c40f"}
+    tabRating.push(<FontAwesomeIcon style={color} icon={faStar} />)
+  }
+}
+
 // Définition d'une variable qui incrémente le nombre de vues lors du click sur whatchmovie
 var addWatch =() =>{
   setWatchMovie(true)
@@ -96,9 +119,20 @@ var addWatch =() =>{
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
+            {/* // Donner son avis avec l'etat MyRating */}
             <ButtonGroup size="sm">
-              <Button color="secondary">-</Button>
-              <Button color="secondary">+</Button>
+              <Button
+                onClick={() => setMyRatingMovie(myRatingMovie - 1)}
+                color="secondary"
+              >
+                -
+              </Button>
+              <Button
+                onClick={() => setMyRatingMovie(myRatingMovie + 1)}
+                color="secondary"
+              >
+                +
+              </Button>
             </ButtonGroup>
           </p>
           <p>
