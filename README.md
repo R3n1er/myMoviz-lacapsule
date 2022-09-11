@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# PROJET MYMOVIZ - LA CAPSULE ACADEMY PARIS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## LANCER L'APPLICATION
 
-## Available Scripts
+1. Cloner le Github et faire `npm install`
 
-In the project directory, you can run:
+2. `npm start` pour lancer l'application MyMoviz
 
-### `npm start`
+## PROJECT OVERVIEW
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+MyMoviz est un site qui va vous permettre d’afficher les films les plus populaires avec la possibilité de créer une wishlist, placer un compteur de vues et de donner une évaluation de chacun des films présentés.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La particularité de cette appli, c’est qu’elle est développée en ==React== !
 
-### `npm test`
+Dans ce nouveau projet, vous allez rebattre les cartes et définir votre première architecture SAP (Single Page Application).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Les fonctionnalités à développer
 
-### `npm run build`
+MyMoviz est une application qui propose une liste de films, avec les dernières sorties cinéma à jour, et qui vous permet de créer votre propre wishlist.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👉 En termes de  fonctionnalités, vous allez :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Proposer un catalogue de films actuellement au cinéma.
+* Mettre en place un descriptif de chaque film (photo, titre et description.)
+* Liker un film.
+* Proposer une page wishlist.
+* Mettre en place un compteur global du nombre de films contenus dans la wishlist.
 
-### `npm run eject`
+## Vos Skils tech à l'issue de ce projet
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+À l’issue de ce projet, vous saurez :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Créer une interface graphique avec JSX.
+* Utiliser la librairie React Stap.
+* Découper une application en composants React.
+* Mettre en œuvre des modules en ES6.
+* Maîtriser les concepts de propriété et d’état d’un composant React.
+* Maîtriser la gestion des événements en React.
+* Faire remonter de l’information entre les composants React (Reverse Data Flow.)
+* Mettre en place votre propre API via un Backend.
+* Maîtriser le cycle de vie d’un composant React.
+* Faire communiquer React avec un Backend grâce à Ajax.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://player.vimeo.com/external/388868803.hd.mp4?s=7672bbedef325735ac7d874e87beb562d69f7aa0&profile_id=175
