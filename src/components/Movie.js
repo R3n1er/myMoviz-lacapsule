@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../App.css";
+import "../App.css"; // Import du fichier css
 
 // Import des composants ReactStrap
 import {
@@ -18,7 +18,7 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// Import des icondes FontAwesome dont on à besoin
+// Import des icones FontAwesome dont on à besoin
 import { faHeart, faVideo, faStar } from "@fortawesome/free-solid-svg-icons";
 
 // Debut de la fonction return React du composant Movie.js
@@ -26,31 +26,41 @@ import { faHeart, faVideo, faStar } from "@fortawesome/free-solid-svg-icons";
 function Movie(props) {
   // Initialisation d'un hook d'etat pour likeMovie
   const [likeMovie, setLikeMovie] = useState(false);
+
   // Initialisation d'un hook d'etat pour watchMovie
   const [watchMovie, setWatchMovie] = useState(false);
+
+  // Initialisation d'un etat countWatchMovie
+const [countWatchMovie, setCountWatchMovie] = useState(0);
+
+// Définition d'une variable qui incrémente le nombre de vues lors du click sur whatchmovie
+var addWatch =() =>{
+  setWatchMovie(true)
+  setCountWatchMovie(countWatchMovie+1)
+}
 
   // Dynamiser le nombre d'etoiles pour la moyenne
   var tabGlobalRating = [];
   for (var i = 0; i < 10; i++) {
     var color = {};
     if (i < props.globalRating) {
-      color = { color: "#e9eb19" };
+      color = { color: "#e9eb19" }; //Style CSS Inline
     }
     tabGlobalRating.push(<FontAwesomeIcon style={color} icon={faStar} />);
   }
   // Condition if de likeMovie - Change la couleur de l'icone coeur
   if (likeMovie) {
-    var colorLike = { color: "#FFDA22", cursor: "pointer" };
+    var colorLike = { color: "#e74c3c", cursor: "pointer" };
   } else {
     var colorLike = { color: "#DDDBF1", cursor: "pointer" };
   }
-  // Condition if de watchMovie - Change la couleur de l'icone watch
+  // Condition if de watchMovie - Change la couleur de l'icone watch (camera)
 
-if (watchMovie) {
-  var colorWatch = { color: "#FFDA22", cursor: "pointer" };
-} else {
-  var colorWatch = { color: "#DDDBF1", cursor: "pointer" };
-}
+  if (watchMovie) {
+    var colorWatch = { color: "#FFDA22", cursor: "pointer" };
+  } else {
+    var colorWatch = { color: "#DDDBF1", cursor: "pointer" };
+  }
 
   return (
     <Col xs="12" lg="6" xl="4">
@@ -58,21 +68,22 @@ if (watchMovie) {
         <CardImg top src={props.movieImg} alt={props.movieName} />
         <CardBody>
           <p>
-            Like{" "}
+            Like
             <FontAwesomeIcon
               style={colorLike}
               icon={faHeart}
-              onClick={() => setLikeMovie(!likeMovie)}
+              onClick={() => setLikeMovie(!likeMovie)} // Déclenchement d'une fonction fleché sur le click du coeur
             />
           </p>
           <p>
-            Nombre de vues{" "}
+            Nombre de vues
             <FontAwesomeIcon
-            style={colorWatch}
+              style={colorWatch}
               icon={faVideo}
-              onClick={() => setWatchMovie(!watchMovie)}
-            />{" "}
-            <Badge color="secondary">2</Badge>
+              onClick={() => addWatch()}
+            />
+            {/* //Appeler la fonction addwatch pour mettre a jour le compteur */}
+            <Badge color="secondary">{countWatchMovie}</Badge>
           </p>
           <p>
             Mon avis <FontAwesomeIcon icon={faStar} />

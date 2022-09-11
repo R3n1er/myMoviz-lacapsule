@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 // Import des composants
-import Movie from "./components/Movie";
+import Movie from "./components/Movie"; // Le composant movie qui affiche les films
 
 // Import des composants ReactStrap
 import {
@@ -13,8 +13,6 @@ import {
   Nav,
   NavLink,
 } from "reactstrap";
-
-
 
 // Tableau de donnée dynamique des films 
 
@@ -63,10 +61,11 @@ var moviesData = [
   },
 ];
 
-var movieList = moviesData.map((movie, i) => {
+// Afficher la liste des films en tableau de composants movie avec un map
+var movieList = moviesData.map((movie, i) => { // map permet de réécrire un tableau d'objet en tableau de movie
   return (
     <Movie
-      key={i}
+      key={i} // Une clef a spécifier pour React (comme un ID)
       movieName={movie.name}
       movieDesc={movie.desc}
       movieImg={movie.img}
@@ -97,7 +96,7 @@ function App() {
             />
           </span>
           <NavItem>
-            <NavLink>Last Releases</NavLink>
+            <NavLink style={{color:'white'}}>Last Releases</NavLink>
           </NavItem>
           <NavItem>
             <NavLink style={{color:'white'}}>

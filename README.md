@@ -10,7 +10,7 @@
 
 MyMoviz est un site qui va vous permettre d’afficher les films les plus populaires avec la possibilité de créer une wishlist, placer un compteur de vues et de donner une évaluation de chacun des films présentés.
 
-La particularité de cette appli, c’est qu’elle est développée en ==React== !
+La particularité de cette appli, c’est qu’elle est développée en <mark>React</mark> !
 
 Dans ce nouveau projet, vous allez rebattre les cartes et définir votre première architecture SAP (Single Page Application).
 
